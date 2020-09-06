@@ -18,7 +18,7 @@ namespace ALNS_GVRPTW
         static void Main(string[] args)
         {
             //测试算法
-                string path = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source =C:\\Users\\张平\\Desktop\\ALNS_GVRPTW-0525\\Solomon\\";
+                string path = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source =C:\\Users\\张平\\Desktop\\ALNS_GVRPTW-0525-master\\Solomon\\";
                 string SolomonInstancesName = "results of Solomon example";
                 new TestInstances().instances(path, SolomonInstancesName); 
                 Console.ReadLine();
