@@ -54,7 +54,7 @@ namespace ALNS_GVRPTW
             List<Route> bestSolution = new List<Route>();
             for (int i = 0; i < solution.Count; i++)
             {
-                Route route = new Route();//给bestSolution申请新的堆空间，切断与solution的牵连
+                Route route = new Route();
                 route.ID = solution[i].ID;
                 route.RouteCapacity = solution[i].RouteCapacity;
                 route.RouteCost = solution[i].RouteCost;
@@ -83,7 +83,7 @@ namespace ALNS_GVRPTW
             }
             double f1 = SolutionCost(solution);
             double best = f1;
-            double T = (-w * f1) / Math.Log(0.5, Math.E);//计算温度的初始值
+            double T = (-w * f1) / Math.Log(0.5, Math.E); //计算温度的初始值
             double p1 = 0,p2 = 0,p3 = 0, q1 = 0, q2 = 0;
             double Fitness = 1;//适值初始值
             double minFitness = 0.0001 * Fitness;//适值下限
@@ -165,7 +165,7 @@ namespace ALNS_GVRPTW
                             bestSolution.Clear();
                             for (int i = 0; i < Solution.Count; i++)
                             {
-                                Route route = new Route();//给bestSolution申请新的堆空间，切断与solution的牵连
+                                Route route = new Route();
                                 route.ID = Solution[i].ID;
                                 route.RouteCapacity = Solution[i].RouteCapacity;
                                 route.RouteCost = Solution[i].RouteCost;
@@ -190,8 +190,7 @@ namespace ALNS_GVRPTW
                         solution.Clear();
                         for (int i = 0; i < Solution.Count; i++)
                         {
-                            Route route = new Route();//给bestSolution申请新的堆空间，切断与solution的牵连
-                            route.ID = Solution[i].ID;
+                            Route route = new Route();
                             route.RouteCapacity = Solution[i].RouteCapacity;
                             route.RouteCost = Solution[i].RouteCost;
                             for (int j = 0; j < Solution[i].IRoute.Count; j++)
@@ -211,7 +210,7 @@ namespace ALNS_GVRPTW
                             Solution.Clear();
                             for (int i = 0; i < solution.Count; i++)
                             {
-                                Route route = new Route();//申请新的堆空间，切断与solution的牵连
+                                Route route = new Route();
                                 route.ID = solution[i].ID;
                                 route.RouteCapacity = solution[i].RouteCapacity;
                                 route.RouteCost = solution[i].RouteCost;
@@ -245,7 +244,7 @@ namespace ALNS_GVRPTW
                     Solution.Clear();
                     for (int i = 0; i < solution.Count; i++)
                     {
-                        Route route = new Route();//申请新的堆空间，切断与solution的牵连
+                        Route route = new Route();
                         route.ID = solution[i].ID;
                         route.RouteCapacity = solution[i].RouteCapacity;
                         route.RouteCost = solution[i].RouteCost;
@@ -261,7 +260,6 @@ namespace ALNS_GVRPTW
             }
             return bestSolution;
         }
-        //委托
         private List<int> Destroy(int q, ref List<Route> S, RemoveDelegate Remove)//让方法名的地址指向方法
         {
             List<int> RequestBank = new List<int>();
