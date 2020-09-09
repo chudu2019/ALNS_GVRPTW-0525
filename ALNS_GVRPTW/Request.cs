@@ -18,5 +18,6 @@ namespace ALNS_GVRPTW
         public double earlyTime { get; set; }
         public double lastTime { get; set; }
         public int cusneed { get; set; }
+
     }
 }
